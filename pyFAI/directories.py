@@ -67,7 +67,7 @@ elif os.path.isdir(PYFAI_DATA):
 else:
     data_dir = ""
 
-testimages contains the directory name where test images are located
+# testimages contains the directory name where test images are located
 testimages = None
 if "PYFAI_TESTIMAGES" in os.environ:
    testimages = os.environ.get("PYFAI_TESTIMAGES")
