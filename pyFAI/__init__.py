@@ -57,7 +57,7 @@ if sys.version_info < (2, 6):
 from .utils import decorators
 
 
-use_opencl = True
+use_opencl = False
 """Global configuration which allow to disable OpenCL programatically.
 It must be set before requesting any OpenCL modules.
 
