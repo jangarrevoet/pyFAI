@@ -68,18 +68,18 @@ else:
     data_dir = ""
 
 # testimages contains the directory name where test images are located
-testimages = None
-if "PYFAI_TESTIMAGES" in os.environ:
-    testimages = os.environ.get("PYFAI_TESTIMAGES")
-    if not os.path.exists(testimages):
-        logger.warning("testimage directory %s does not exist", testimages)
-else:
-    testimages = os.path.join(data_dir, "testimages")
-    if not os.path.isdir(testimages):
-        # create a temporary folder
-        testimages = os.path.join(tempfile.gettempdir(), "pyFAI_testimages_%s" % (getpass.getuser()))
-        if not os.path.exists(testimages):
-            try:
-                os.makedirs(testimages)
-            except OSError as err:
-                logger.warning("Creating test_directory %s ended in error %s, probably a race condition", testimages, err)
+#testimages = None
+#if "PYFAI_TESTIMAGES" in os.environ:
+#    testimages = os.environ.get("PYFAI_TESTIMAGES")
+#    if not os.path.exists(testimages):
+#        logger.warning("testimage directory %s does not exist", testimages)
+#else:
+#    testimages = os.path.join(data_dir, "testimages")
+#    if not os.path.isdir(testimages):
+#        # create a temporary folder
+#        testimages = os.path.join(tempfile.gettempdir(), "pyFAI_testimages_%s" % (getpass.getuser()))
+#        if not os.path.exists(testimages):
+#            try:
+#                os.makedirs(testimages)
+#            except OSError as err:
+#                logger.warning("Creating test_directory %s ended in error %s, probably a race condition", testimages, err)
